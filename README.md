@@ -43,6 +43,19 @@ You can support me by Alipay (scan QR code below) or [ko-fi](https://ko-fi.com/a
 
 ## Changelog
 
+### 2026-03-05 Updates
+
+1. **New Features**:
+   - **HTML Export Functionality**: Added ability to export Douban data as HTML table
+   - **Query Limit Control**: Added input field to customize the maximum number of items to fetch (default: 200)
+   - **Export Progress Feedback**: Added export status messages and loading state
+
+2. **Technical Improvements**:
+   - Updated `fetch-douban` API to support custom query limits
+   - Added batch fetching logic for more efficient data retrieval
+   - Improved error handling for export operations
+   - Updated .gitignore file
+
 ### 2026-02-26 Updates
 
 1. **UI Improvements**:
