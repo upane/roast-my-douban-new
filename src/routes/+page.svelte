@@ -253,10 +253,15 @@ ${rows}
             >
               豆瓣画像
             </div>
+            <!-- Overlay Text -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center z-0">
+              <h1 class="text-2xl md:text-4xl font-extrabold text-[#42bd56] tracking-tight mb-2 text-center drop-shadow-sm">ROAST MY DOUBAN</h1>
+              <p class="text-[#42bd56] text-xs tracking-[0.2em] font-bold text-center drop-shadow-sm">豆瓣标记精神状态分析</p>
+            </div>
             <img
               src="/douban.webp"
               alt="Douban Life"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-10"
               onerror={(e) => ((e.currentTarget as HTMLImageElement).style.display = 'none')}
             />
 
@@ -278,12 +283,6 @@ ${rows}
         <!-- Right Column: Login Form -->
         <div class="w-full max-w-md flex flex-col items-center gap-4">
           <div class="text-center mb-8">
-            <h1
-              class="text-3xl md:text-5xl font-extrabold text-[#007722] tracking-tight mb-2 flex items-center justify-center gap-3 md:gap-4"
-            >
-              <span>ROAST MY DOUBAN</span>
-            </h1>
-            <p class="text-[#007722] text-sm tracking-[0.2em] font-bold">豆瓣标记精神状态分析</p>
           </div>
 
           <form
@@ -557,12 +556,6 @@ ${rows}
         class="w-full max-w-4xl col-start-1 row-start-1 flex flex-col items-center gap-6 md:gap-16 animate-in fade-in zoom-in duration-500"
       >
         <div class="text-center">
-          <h1
-            class="text-3xl md:text-5xl font-extrabold text-[#007722] tracking-tight mb-2 flex items-center justify-center gap-3 md:gap-4"
-          >
-            <span>ROAST MY DOUBAN</span>
-          </h1>
-          <p class="text-[#007722] text-sm tracking-[0.2em] font-bold">豆瓣标记精神状态分析</p>
         </div>
 
         <div
