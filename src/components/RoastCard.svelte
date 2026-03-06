@@ -150,7 +150,7 @@
   function getTooltipClass(index: number) {
     if (index === 0) return '-translate-x-1/2 -translate-y-full -mt-2'; // Top
     if (index === 1 || index === 2) return 'translate-x-2 -translate-y-1/2'; // Right
-    return '-translate-x-full -translate-x-2 -translate-y-1/2'; // Left (3, 4)
+    return '-translate-x-full -ml-2 -translate-y-1/2'; // Left (3, 4, 5)
   }
 
   import QRCode from 'qrcode';

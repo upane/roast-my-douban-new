@@ -33,6 +33,7 @@ export class Roaster {
     this.status = 'scanning';
     this.errorMsg = '';
     this.scannedCount = 0;
+    this.totalItems = 0;
     this.currentItem = null;
     this.logCounter = 0;
     this.systemLogs = [{id: this.logCounter++, text: '正在建立精神连接...'}];
@@ -272,7 +273,7 @@ export class Roaster {
            }
         } else {
            if (item.rating === 5) logs.push(`>> 评分: 5.0 (高分样本)`);
-           if (item.rating <= 2) logs.push(`>> 评分: ${item.rating}.0 (检测到愤怒)`);
+           if (item.rating !== null && item.rating !== undefined && item.rating <= 2) logs.push(`>> 评分: ${item.rating}.0 (检测到愤怒)`);
            if (item.comment) logs.push(`>> 评论摘要: "${item.comment.slice(0, 32)}..."`);
         }
 

@@ -124,7 +124,7 @@ async function callOpenAI(prompt: string, apiKey?: string): Promise<LLMResponse>
   const key = apiKey || env.OPENAI_API_KEY;
   if (!key) throw new Error("Missing OPENAI_API_KEY");
 
-  const model = env.OPENAI_MODEL_ID || 'gpt-5';
+  const model = env.OPENAI_MODEL_ID || 'gpt-4o';
 
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',

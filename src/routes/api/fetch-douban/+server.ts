@@ -74,12 +74,18 @@ export const POST: RequestHandler = async ({ request }: { request: Request }) =>
             create_time: item.create_time,
             year: item.subject?.year,
             cover_url: item.subject?.pic?.large || item.subject?.cover_url || ''
-        })).filter(item => {
-          const hasRating = item.rating !== undefined && item.rating !== null;
-          const hasComment = typeof item.comment === 'string' && item.comment.length > 0;
-          const hasTags = Array.isArray(item.tags) && item.tags.length > 0;
-          return hasRating || hasComment || hasTags;
-        });
+        }));
+
+    // For roast mode (shuffle=true), only keep items with meaningful data for AI analysis.
+    // For export mode (shuffle=false), keep all items so nothing is lost.
+    if (shouldShuffle) {
+      items = items.filter(item => {
+        const hasRating = item.rating !== undefined && item.rating !== null;
+        const hasComment = typeof item.comment === 'string' && item.comment.length > 0;
+        const hasTags = Array.isArray(item.tags) && item.tags.length > 0;
+        return hasRating || hasComment || hasTags;
+      });
+    }
 
     if (items.length > queryLimit) {
       items = items.slice(0, queryLimit);

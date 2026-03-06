@@ -36,7 +36,7 @@
     google: '',
     deepseek: '',
     qwen: '',
-    openai: '',
+    chatgpt: '',
   });
 
   onMount(() => {
@@ -214,7 +214,7 @@ ${rows}
       class="absolute inset-0 opacity-[0.02] z-0 w-[120vw] -ml-10 pointer-events-none flex flex-wrap items-center justify-center p-4 gap-9 overflow-hidden"
     >
       {#each Array(72) as _, i}
-        {@const randomRotation = Math.random() * 4 - 2}
+        {@const randomRotation = ((i * 73 + 31) % 400 - 200) / 100}
         <div
           class="w-24 h-36 bg-black rounded-sm transform"
           style="transform: rotate({randomRotation}deg) scale({1 + (i % 3) * 0.1})"

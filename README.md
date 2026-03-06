@@ -78,6 +78,16 @@ You can support me by Alipay (scan QR code below) or [ko-fi](https://ko-fi.com/a
    - Added blur effect when hovering over the douban.webp image
    - Added hover message box in the center of the image: "谢谢做这张图的豆瓣用户@mui如有侵权，请联系我删除"
 
+2. **Bug Fixes**:
+   - Fixed `apiKeys` state definition using `openai` key while input was bound to `chatgpt`, causing the OpenAI key field to never be saved correctly
+   - Fixed rate limit bypass not checking `chatgpt` API key — users providing only an OpenAI key were still being rate-limited
+   - Fixed `null` rating value incorrectly triggering "检测到愤怒" log entry during scanning animation (`null <= 2` evaluates to `true` in JavaScript)
+   - Fixed `totalItems` not being reset in `reset()`, causing the progress counter to briefly show stale data when re-running an analysis
+   - Fixed HTML export filtering out items that were only marked (no rating, comment, or tags) — export mode now returns all items
+   - Fixed SSR/CSR hydration mismatch caused by `Math.random()` in the decorative background template; replaced with a deterministic index-based formula
+   - Fixed conflicting Tailwind CSS classes (`-translate-x-full -translate-x-2`) in the radar chart tooltip positioning; replaced with `-translate-x-full -ml-2`
+   - Fixed OpenAI default model fallback from `gpt-5` (invalid) to `gpt-4o`
+
 ### 2026-02-25 Updates
 
 1. **UI Improvements**:

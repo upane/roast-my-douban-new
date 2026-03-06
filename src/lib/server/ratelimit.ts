@@ -74,7 +74,7 @@ export function withRateLimit(
     try {
       const cloned = event.request.clone();
       const body = await cloned.json();
-      if (body?.apiKeys && (body.apiKeys.google || body.apiKeys.deepseek || body.apiKeys.qwen)) {
+      if (body?.apiKeys && (body.apiKeys.google || body.apiKeys.deepseek || body.apiKeys.qwen || body.apiKeys.chatgpt)) {
         // Bypass rate limit for supporters
         return handler(event);
       }
