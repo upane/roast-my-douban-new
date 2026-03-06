@@ -261,20 +261,16 @@ ${rows}
             <img
               src="/douban.webp"
               alt="Douban Life"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-10"
+              class="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:blur-sm z-10"
               onerror={(e) => ((e.currentTarget as HTMLImageElement).style.display = 'none')}
             />
 
             <!-- Attribution Overlay -->
             <div
-              class="absolute inset-0 bg-white/40 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm transition-opacity duration-300 text-center"
+              class="absolute inset-0 bg-white/40 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm transition-opacity duration-300 text-center z-20"
             >
-              <p class="text-[#007722]/70 bg-white/70 p-3 text-sm leading-relaxed pointer-events-none">
-                谢谢做这张图的豆瓣用户
-                <span class="font-bold underline decoration-dotted underline-offset-2">@mui</span>
-                <br />
-
-                如有侵权，请联系我删除。
+              <p class="text-[#42bd56] bg-white/70 p-3 text-sm leading-relaxed pointer-events-none">
+                谢谢做这张图的豆瓣用户@mui如有侵权，请联系我删除
               </p>
             </div>
           </a>

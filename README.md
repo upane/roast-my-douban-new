@@ -70,6 +70,14 @@ You can support me by Alipay (scan QR code below) or [ko-fi](https://ko-fi.com/a
    - Fixed compilation errors related to Svelte template syntax
    - Improved responsive design for better mobile display
 
+### 2026-03-06 Updates
+
+1. **UI Improvements**:
+   - Removed "ROAST MY DOUBAN 豆瓣标记精神状态分析" text from the main page
+   - Added overlay text "ROAST MY DOUBAN 豆瓣标记精神状态分析" on the douban.webp image with light green color
+   - Added blur effect when hovering over the douban.webp image
+   - Added hover message box in the center of the image: "谢谢做这张图的豆瓣用户@mui如有侵权，请联系我删除"
+
 ### 2026-02-25 Updates
 
 1. **UI Improvements**:
